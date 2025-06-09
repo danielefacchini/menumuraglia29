@@ -1,20 +1,10 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <title>Download automatico PDF</title>
-  <script>
-    window.onload = function() {
-      const link = document.createElement("a");
-      link.href = "menudig.pdf";
-      link.download = "menudig.pdf";
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    };
-  </script>
+  <meta http-equiv="refresh" content="0; url=menudig.pdf">
+  <title>Redirect PDF</title>
 </head>
 <body>
-  <p>Se il download non parte automaticamente, <a href="menudig.pdf" download>clicca qui</a>.</p>
+  <p>Reindirizzamento in corso al PDF... Se non succede nulla, <a href="menudig.pdf">clicca qui</a>.</p>
 </body>
 </html>

@@ -2,37 +2,19 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Visualizzazione PDF</title>
-  <style>
-    body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    a.button {
-      display: inline-block;
-      padding: 1em 2em;
-      font-size: 1.2em;
-      background-color: #007acc;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: background-color 0.3s;
-    }
-
-    a.button:hover {
-      background-color: #005fa3;
-    }
-  </style>
+  <title>Download automatico PDF</title>
+  <script>
+    window.onload = function() {
+      const link = document.createElement("a");
+      link.href = "menudig.pdf";
+      link.download = "menudig.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    };
+  </script>
 </head>
 <body>
-  <h1>Apri il PDF</h1>
-  <a class="button" href="menudig.pdf" target="_blank">Visualizza documento</a>
-  <p style="margin-top: 1em; color: #666;">Il file verrà aperto in una nuova scheda con supporto completo ai link interni.</p>
+  <p>Se il download non parte automaticamente, <a href="menudig.pdf" download>clicca qui</a>.</p>
 </body>
 </html>
